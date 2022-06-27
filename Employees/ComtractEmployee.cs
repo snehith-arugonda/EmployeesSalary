@@ -1,20 +1,16 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Employees;
-
-public class ComtractEmployee : Employee
+﻿namespace Employees
 {
-    public ComtractEmployee()
+    public class ComtractEmployee : Employee
     {
-        EmployeeType = EmployeeType.contract;
-    }
-    public override int CalculateSalaray()
-    {
-        return this.Salary;
+        public ComtractEmployee()
+        {
+            this.EmployeeType = EmployeeType.contract;
+        }
+
+        public override int CalculateSalary()
+        {
+            return this.Salary;
+        }
     }
 }
 
