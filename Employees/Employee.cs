@@ -10,9 +10,9 @@
 
         public int Salary { get; set; }
 
-        public EmployeeType EmployeeType { get; set; }
+        public EmployeeType EmployeeType { get; protected set; }
 
-        public virtual int CalculateSalary()
+        public int CalculateSalary()
         {
             return this.Salary;
         }

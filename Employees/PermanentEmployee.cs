@@ -4,15 +4,10 @@
     {
         public PermanentEmployee()
         {
-            this.EmployeeType = EmployeeType.permanent;
+            this.EmployeeType = EmployeeType.Permanent;
         }
 
         public int BonusPercent { get; set; }
-
-        public override int CalculateSalary()
-        {
-            return this.Salary;
-        }
 
         public int CalculateBonus()
         {
