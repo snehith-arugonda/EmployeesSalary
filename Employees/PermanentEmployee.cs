@@ -1,33 +1,22 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Employees;
-
-public class PermanentEmployee : Employee
+﻿namespace Employees
 {
-    public int BonusPercant { get; set; } = 10;
-    public PermanentEmployee()
+    public class PermanentEmployee : Employee
     {
-        EmployeeType = EmployeeType.permanent;
-    }
+        public PermanentEmployee()
+        {
+            this.EmployeeType = EmployeeType.Permanent;
+        }
 
-    public override int CalculateSalaray()
-    {
-        return this.Salary;
-    }
+        public int BonusPercent { get; set; }
 
-    public int CalculateBonus()
-    {
-        return this.BonusPercant * this.Salary / 100;
-    }
+        public int CalculateBonus()
+        {
+            return this.BonusPercent * this.Salary / 100;
+        }
 
-    public int CalculateSalaryWithBonus()
-    {
-        return this.Salary + this.CalculateBonus();
+        public int CalculateSalaryWithBonus()
+        {
+            return this.Salary + this.CalculateBonus();
+        }
     }
-
 }
-
